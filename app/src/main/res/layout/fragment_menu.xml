@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!-- カメラで撮った写真を表示するためのview -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+    <!-- 上の文でgoneと入力すると画面上でも裏画面でも非表示になる。
+    　　　ただ裏の処理ではしっかり認識しているため問題ない -->
+
+    <!-- カメラで撮った画像を消すためのボタン  -->
+    <Button
+        android:id="@+id/button_clear_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="☓"
+        android:layout_marginTop="380dp"
+        android:layout_marginStart="300dp"
+        android:visibility="invisible" />
+    <!-- 上の文でinvisibleと入力すると画面上では非表示になる。
+    ただ裏の処理ではしっかり認識しているため問題ない -->
+
+    <!--カメラを起動させて写真を撮るためのボタン -->
+    <Button
+        android:id="@+id/button_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:text="カメラ" />
+
+    <!--ストレージを起動させて選択した写真を表示させるためのボタン -->
+    <!--このボタンの処理を追加するとプログラムが複雑になるので現段階では未実装とする-->
+    <Button
+        android:id="@+id/button_pick_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ストレージ"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/button_to_api"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="挿入"
+        android:visibility="invisible" />
+
+</RelativeLayout>
